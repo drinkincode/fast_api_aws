@@ -2,7 +2,7 @@
     "family": "fast_api_aws_task",
     "containerDefinitions": [
         {
-            "name": "fast_api_aws_v2",
+            "name": "fast_api_aws",
             "image": "nginx",
             "cpu": 0,
             "portMappings": [
