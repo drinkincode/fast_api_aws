@@ -3,23 +3,21 @@
     "containerDefinitions": [
         {
             "name": "fast_api_aws",
-            "image": "nginx",
+            "image": "010526261674.dkr.ecr.us-east-2.amazonaws.com/fast_api_aws:305cfd6ac01247b133062af15da6a1d102d48c2f",
             "cpu": 0,
             "portMappings": [
                 {
                     "name": "fast_api_aws-80-tcp",
                     "containerPort": 80,
-                    "hostPort": 80,
+                    "hostPort": 0,
                     "protocol": "tcp",
                     "appProtocol": "http"
                 }
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -34,6 +32,7 @@
         }
     ],
     "executionRoleArn": "arn:aws:iam::010526261674:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
     "requiresCompatibilities": [
         "EC2"
     ],
