@@ -4,7 +4,7 @@ WORKDIR /code/app
 
 COPY . /code/app
 
-RUN pip install --no-cache-dir -r ./code/app/requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt
 
 EXPOSE 80
 
