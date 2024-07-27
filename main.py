@@ -8,4 +8,4 @@ app = FastAPI()
 app.include_router(oauth.router)
 app.include_router(api.router)
 
-uvicorn.run(app, port=8080)
+uvicorn.run(app, port=80)
